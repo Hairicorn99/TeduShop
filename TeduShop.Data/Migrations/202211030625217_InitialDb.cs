@@ -8,6 +8,17 @@ namespace TeduShop.Data.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Errors",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        StackTrace = c.String(),
+                        CreatedDate = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Footers",
                 c => new
                     {
@@ -318,6 +329,7 @@ namespace TeduShop.Data.Migrations
             DropTable("dbo.Menus");
             DropTable("dbo.MenuGroups");
             DropTable("dbo.Footers");
+            DropTable("dbo.Errors");
         }
     }
 }
