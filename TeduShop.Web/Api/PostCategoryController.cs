@@ -27,11 +27,7 @@ namespace TeduShop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                if (!ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
+
                 {
                     var listCategory = _postCategoryService.GetAll();
 
