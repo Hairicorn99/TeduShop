@@ -193,6 +193,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -207,8 +208,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\app.route.js" />
+    <Content Include="app\components\products\product.route.js" />
+    <Content Include="app\components\products\productAddController.js" />
+    <Content Include="app\components\products\productEditController.js" />
+    <Content Include="app\components\products\productEditView.html" />
+    <Content Include="app\components\products\productListController.js" />
+    <Content Include="app\components\products\productListView.html" />
+    <Content Include="app\components\products\productAddView.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\angular-csp.css" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\angular.js" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\angular.min.js" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -219,10 +233,16 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\admin\" />
+    <Folder Include="app\components\orders\" />
+    <Folder Include="app\components\product_categories\" />
+    <Folder Include="app\components\roles\" />
+    <Folder Include="app\components\users\" />
+    <Folder Include="app\shared\directive\" />
+    <Folder Include="app\shared\footer\" />
+    <Folder Include="app\shared\navigation\" />
+    <Folder Include="app\shared\services\" />
+    <Folder Include="Assets\admin\libs\Scripts\spa\" />
     <Folder Include="Assets\client\" />
-    <Folder Include="Scripts\plugins\" />
-    <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -230,6 +250,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\.package-lock.json" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\angular.min.js.gzip" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\angular.min.js.map" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\bower.json" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\LICENSE.md" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\package.json" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\node_modules\angular\README.md" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\package.json" />
+    <Content Include="Assets\admin\libs\Scripts\plugins\package-lock.json" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">
